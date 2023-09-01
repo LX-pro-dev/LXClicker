@@ -43,9 +43,37 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    // To use the androidx.test.core APIs
+    androidTestImplementation "androidx.test:core:1.5.0"
+    // Kotlin extensions for androidx.test.core
+    androidTestImplementation "androidx.test:core-ktx:1.5.0"
+
+    // To use the androidx.test.espresso
+    androidTestImplementation "androidx.test:espresso:espresso-core:3.5.1"
+
+    // To use the JUnit Extension APIs
+    androidTestImplementation "androidx.test.ext:junit:1.1.5"
+    // Kotlin extensions for androidx.test.ext.junit
+    androidTestImplementation "androidx.test.ext:junit-ktx:1.1.5"
+
+    // To use the Truth Extension APIs
+    androidTestImplementation "androidx.test.ext:truth:1.5.0"
+
+    // To use the androidx.test.runner APIs
+    androidTestImplementation "androidx.test:runner:1.5.2"
+
+    // To use android test orchestrator
+    androidTestUtil "androidx.test:orchestrator:1.4.2"
     testImplementation 'junit:junit:4.13.2'
+    testImplementation 'org.mockito:mockito-core:5.5.0'
+    testImplementation 'androidx.arch.core:core-testing:2.1.0'
+    testImplementation "io.mockk:mockk:1.12.0" // Use the latest version
+    testImplementation "androidx.test:core:1.5.0"
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'org.mockito:mockito-core:5.5.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    androidTestImplementation "androidx.fragment:fragment-testing:1.5.5"
     implementation 'androidx.lifecycle:lifecycle-viewmodel:2.5.1' // or the version you are using
     implementation 'androidx.lifecycle:lifecycle-runtime:2.5.1'
     implementation 'androidx.lifecycle:lifecycle-livedata:2.5.1'
