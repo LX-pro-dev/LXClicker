@@ -1,0 +1,59 @@
+<!-- res/layout/fragment_counting.xml -->
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.lxclicker.ui.viewmodels.CountViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <Button
+            android:id="@+id/btnReset"
+            style="?attr/borderlessButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="20dp"
+            android:longClickable="true"
+            android:text="@string/reset"
+            android:contentDescription="@string/reset"
+            app:layout_constraintEnd_toStartOf="@id/btnSwitchMode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSwitchMode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:longClickable="true"
+            android:layout_marginStart="20dp"
+            android:text="@string/mode"
+            android:contentDescription="@string/mode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btnReset"
+            app:layout_constraintTop_toTopOf="@id/btnReset"
+            app:icon="@drawable/baseline_add_circle_outline_24"
+            style="@style/Widget.MaterialComponents.Button"/>
+
+        <Button
+            android:id="@+id/btnCount"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/black"
+            android:longClickable="true"
+            android:text="@{String.valueOf(viewModel.countState)}"
+            android:textSize="64sp"
+            android:contentDescription="@string/count_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSwitchMode"
+            app:layout_constraintVertical_weight="1"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
